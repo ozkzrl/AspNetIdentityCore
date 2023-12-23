@@ -1,0 +1,30 @@
+﻿@page
+@model AspNetIdentityCore.Pages.LoginModel
+@{
+}
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <h1>Login</h1>
+            <form method="post">
+                <div class="mb-3">
+                    <label class="col-form-label" asp-for="Model.Email">Email Adres</label>
+                    <input type="text" asp-for="Model.Email" class="form-control" />
+                    <span asp-validation-for="Model.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label" asp-for="Model.Password">Password</label>
+                    <input type="text" asp-for="Model.Password" class="form-control" />
+                    <span asp-validation-for="Model.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" asp-for="Model.RememberMe" class="form-check-input" />
+                    <label class="form-check-label" asp-for="Model.RememberMe">Remmber Me?</label>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
